@@ -4,21 +4,35 @@ An App to do Machine Learning Classification on Animals.
 ### Resources
 
 #### GIT
-1. https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/ [Manage Multiple GIT Accounts on MAC]
+1. [Manage Multiple GIT Accounts on MAC](https://blog.gitguardian.com/8-easy-steps-to-set-up-multiple-git-accounts/)
    
 #### Fast AI
-1. https://course.fast.ai (Fast AI Course)
-2. https://github.com/fastai/fastbook/tree/master (Fast AI Book)
-3. https://docs.fast.ai
+1. [Fast AI Course](https://course.fast.ai)
+2. [Fast AI Book](https://github.com/fastai/fastbook/tree/master)
+3. [Fast AI Docs](https://docs.fast.ai)
+4. [Fast AI Forum - Part 1: Lesson 1 to 8](https://forums.fast.ai/t/lesson-1-official-topic/95287)
+5. [Fast AI Forum - Part 2: Lesson 9 to 25](https://forums.fast.ai/t/lesson-9-official-topic/100562)
 
+#### Huggingface
+1. Create a [Huggingface Account](https://www.huggingface.co/) - This is needed to Host the trained Model
+2. Next, Click on the [Spaces](https://huggingface.co/spaces) Tab and create a new Space for your Model.
+3. Select `Gradio` as the Space SDK
+   
 #### Google Colab
+1. [Google Colab](https://colab.research.google.com) - This is needed to Train the Model
 ** Remember to change to GPU or TPU while training models. While on your Colab Jupyter Notebook, Go to -> Runtime -> Change Runtime Type -> Select the GPU or TPU for the session.
-1. https://www.datacamp.com/blog/tpu-vs-gpu-ai
+2. [TPU VS GPU Comparison](https://www.datacamp.com/blog/tpu-vs-gpu-ai)
 
 #### Github Pages
-1. https://docs.github.com/en/pages/quickstart
-2. https://dev.to/scc33/deploying-to-github-pages-using-gh-pages-2d95
-3. https://gist.github.com/promto-c/e46ca197f324a2148af919e18c18b5e6 [Deploying a General Web App (HTML, CSS, JS) on GitHub Pages]
+1. [Github Pages Quickstart](https://docs.github.com/en/pages/quickstart)
+2. [Deploying to Github Pages using gh-pages](https://dev.to/scc33/deploying-to-github-pages-using-gh-pages-2d95)
+3. [Deploying a General Web App (HTML, CSS, JS) on GitHub Pages](https://gist.github.com/promto-c/e46ca197f324a2148af919e18c18b5e6)
+
+#### Jupyter Notebooks
+1. [Jupyter Notebooks 101](https://www.kaggle.com/code/jhoward/jupyter-notebook-101)
+
+#### Gradio
+1. https://www.gradio.app
 
 #### Local Development Setup
 1. After developing & training the ML Model on Google Colab, we download the model locally.
@@ -44,22 +58,23 @@ jupyter notebook --no-browser
 ```
 
 ## Model Training Steps
-1. Go to Google Colab to train the model. This Step will create Notebook: https://huggingface.co/spaces/srivardhanjalan/dog-cat-classifier/blob/main/dogs_cats_classifier_model.ipynb
-2. Export & Download the Model in the above Notebook after training is done. This Step will generate the file: https://huggingface.co/spaces/srivardhanjalan/dog-cat-classifier/blob/main/dog-cat-classifier-model.pkl
+1. Go to Google Colab to train the model. This Step will create Notebook: [dogs_cats_classifier_model.ipynb](https://huggingface.co/spaces/srivardhanjalan/dog-cat-classifier/blob/main/dogs_cats_classifier_model.ipynb)
+2. Export & Download the Model in the above Notebook after training is done. This Step will generate the file: [dog-cat-classifier-model.pkl](https://huggingface.co/spaces/srivardhanjalan/dog-cat-classifier/blob/main/dog-cat-classifier-model.pkl)
 3. Launch Jupyter Notebook Locally
-4. Create a Notebook to use the Trained Model above. This Step will create Notebook: https://huggingface.co/spaces/srivardhanjalan/dog-cat-classifier/blob/main/dogs-cats-classifier-app.ipynb
+4. Create a Notebook to use the Trained Model above. This Step will create Notebook: [dogs-cats-classifier-app.ipynb](https://huggingface.co/spaces/srivardhanjalan/dog-cat-classifier/blob/main/dogs-cats-classifier-app.ipynb)
 5. Add `#|export` to each cell the will be part of the final Huggingface App.
 6. Use `nbdev` to export the App 
 ```
 import nbdev
 nbdev.export.nb_export('dogs-cats-classifier-app.ipynb', 'app')
 ```
-7. Create a Huggingface Space for the App, and push the code to the Huggingface Git Repo. Do not forget to include the `requirements.txt` file.
-8. Test the App on Huggingface.
-9. Use the Gradio API link, at the bottom of the Huggingface App Page to get the Python/Javacript/Curl Documenttaion to access the Model via API
-10. Use Github Pages to invoke the Gradio API, and access the model hosted on Huggingface.
-11. Checkin all the code. 
-12. Done!
+7. The above step will generate a `app.py` file with the code in the cell marked with `#|export` in the Notebook from Step 4.
+8. Create a Huggingface Space for the App, and push the code to the Huggingface Git Repo. Do not forget to include the `requirements.txt` file.
+9. Test the App on Huggingface.
+10. Use the Gradio API link, at the bottom of the Huggingface App Page to get the Python/Javacript/Curl Documenttaion to access the Model via API
+11. Add a new Page in the Github Repo, with the HTML and Javascript needed to invoke the Gradio API, and access the model hosted on Huggingface.
+12. Ensure Github Pages shows the new Page.
+13. Done!
 
 ## Dog & Cat Classifier
 ### Huggingface Model & App Repo
