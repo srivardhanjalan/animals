@@ -35,9 +35,9 @@ An App to do Machine Learning Classification on Animals.
 1. https://www.gradio.app
 
 #### Local Development Setup
-1. After developing & training the ML Model on Google Colab, we download the model locally.
-2. After the .pkl Model file has been downloaded we can load the trained Model and run queries against it.
-3. This can be done locally using Jupyter Notebooks (as we only need Colab and the GPU respurces to train the model). 
+1. After developing & training the ML Model on Google Colab, we export and download the Model (.pkl file) to our local machine.
+2. Downloading the Model to our local machine will enable us to launch Jupter Notebooks locally, and run queries against the Trained Model.
+3. We can run queries against the Trained Model locally, as it does not require GPU resources to run. 
 4. Local Setup (Run the following on the Terminal)
 ```
 # clone git repo: https://github.com/fastai/fastsetup
