@@ -20,7 +20,10 @@ An App to do Machine Learning Classification on Animals.
    
 #### Google Colab
 1. [Google Colab](https://colab.research.google.com) - This is needed to Train the Model
-** Remember to change to GPU or TPU while training models. While on your Colab Jupyter Notebook, Go to -> Runtime -> Change Runtime Type -> Select the GPU or TPU for the session.
+```
+Remember to change the Runtime Environment to GPU or TPU while training models. This will have a major performance increase while Model Training, than CPU (default selection).
+While on your Colab Jupyter Notebook, Go to -> Runtime -> Change Runtime Type -> Select the GPU or TPU for the session.
+```
 2. [TPU VS GPU Comparison](https://www.datacamp.com/blog/tpu-vs-gpu-ai)
 
 #### Github Pages
