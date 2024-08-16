@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dog & Cat Classifier</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@gradio/client/dist/index.min.js" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+      <h1 class="title">Dog & Cat Classifier</h1>
+      <p id="currentTime"></p>
+      
+      
+      <input id="photo" type="file">
+      <div id="photoDisplay"></div>
+      <div id="loader" style="display: none"><h3>Analyzing...</h3></div>
+      <div id="results"></div>
+      <script type="module">
+        import { Client } from "https://cdn.jsdelivr.net/npm/@gradio/client/dist/index.min.js";
+        
+        const photo = document.getElementById("photo");
+
+        photo.addEventListener('change', (e) => {
+          const fr = document.getElementById('photo')
+          const file = fr.files[0];
+    
+          if (file) {
+            displayFile(file)
+            processFile(file);
+          }
+        });
+        
+        const loaded = (e) => {
+          const fr = e.target;
+          var result = fr.result;
+          
+          const photoDisplay = document.getElementById("photoDisplay");
+          photoDisplay.innerHTML = `<br><img src="${result}" width="300">`
+        }
+        
+        async function displayFile(file) {
+          const fr = new FileReader();
+          fr.readAsDataURL(file);
+          fr.addEventListener('loadend', loaded);
+        }
+        
+        async function processFile(file) {
+          loader.style.display = 'block'
+          const classifierClient = await Client.connect("srivardhanjalan/dog-cat-classifier");
+      	  const result = await classifierClient.predict("/predict", { 
+      				img: file
+      	  });
+      	  loader.style.display = 'none'
+      	  
+          console.log(result.data);
+          const label = result.data[0].confidences[0].label;
+          const results = document.getElementById("results");
+          results.innerHTML = `<h3>Classification</h3><p>${label}</p>`
+        }
+      </script>
+  </body>
+</html>
