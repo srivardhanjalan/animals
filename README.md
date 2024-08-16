@@ -79,6 +79,14 @@ nbdev.export.nb_export('dogs-cats-classifier-app.ipynb', 'app')
 12. Ensure Github Pages shows the new Page.
 13. Done!
 
+## Code Checking Steps
+Ensure the following files are checked-in to the Huggingface Spaces Git Repo for each Model
+1. The Jupyter Notebook used for Model Training from Google Colab. All Colab Notebooks are stored in [Google Drive](https://drive.google.com/drive/home) under the folder `Colab Notebooks`.
+2. The Training Data used to Train the Model.
+3. The .pkl Trained Model File.
+4. The Jupyter Notebook used to run queries on the Trained Model locally.
+5. The `app.py` File, generated using the local Jupyter Notebook.
+
 ## Dog & Cat Classifier
 ### Huggingface Model & App Repo
 https://huggingface.co/spaces/srivardhanjalan/dog-cat-classifier/tree/main
