@@ -26,12 +26,21 @@ An App to do Machine Learning Classification on Animals.
 3. This can be done locally using Jupyter Notebooks (as we only need Colab and the GPU respurces to train the model). 
 4. Local Setup (Run the following on the Terminal)
 ```
-  conda install pytorch torchvision -c pytorch
-  conda install -c fastai fastai  
-  conda install conda-forge::gradio
-  conda install -c fastai nbdev
-  conda install jupyter
-  jupyter notebook --no-browser
+# clone git repo: https://github.com/fastai/fastsetup
+git clone https://github.com/fastai/fastsetup.git
+
+# run the following command to setup conda
+./fastsetup/setup-conda.sh
+
+# install libraries using conda
+conda install pytorch torchvision -c pytorch
+conda install -c fastai fastai  
+conda install conda-forge::gradio
+conda install -c fastai nbdev
+
+# install and run Jupyter Notebook locally
+conda install jupyter
+jupyter notebook --no-browser
 ```
 
 ## Model Training Steps
