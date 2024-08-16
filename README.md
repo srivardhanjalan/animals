@@ -76,8 +76,9 @@ nbdev.export.nb_export('dogs-cats-classifier-app.ipynb', 'app')
 9. Test the App on Huggingface.
 10. Use the Gradio API link, at the bottom of the Huggingface App Page to get the Python/Javacript/Curl Documenttaion to access the Model via API
 11. Add a new Page in the Github Repo, with the HTML and Javascript needed to invoke the Gradio API, and access the model hosted on Huggingface.
-12. Ensure Github Pages shows the new Page.
-13. Done!
+12. Ensure Github Pages shows the new Page. On the Github Repo, Go to Settings -> Pages, and ensure the correct branch is selected to render the Github Page.
+13. The Github Page will be available at [github-username].github.io/[repository-name]. Eg: srivardhanjalan.github.io/animals
+14. Done!
 
 ## Code Checking Steps
 Ensure the following files are checked-in to the Huggingface Spaces Git Repo for each Model
