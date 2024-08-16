@@ -3,7 +3,8 @@ An App to do Machine Learning Classification on Animals.
 
 ### Learning Resources
 #### Fast AI
-1. https://docs.fast.ai
+1. https://course.fast.ai
+2. https://docs.fast.ai
 
 #### Google Colab
 ** Remember to change to GPU or TPU while training models. While on your Colab Jupyter Notebook, Go to -> Runtime -> Change Runtime Type -> Select the GPU or TPU for the session.
