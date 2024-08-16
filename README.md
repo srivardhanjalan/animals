@@ -86,6 +86,9 @@ Ensure the following files are checked-in to the Huggingface Spaces Git Repo for
 3. The .pkl Trained Model File.
 4. The Jupyter Notebook used to run queries on the Trained Model locally.
 5. The `app.py` File, generated using the local Jupyter Notebook.
+6. The `requirements.txt` file associated to the `app.py` file.
+
+#### Note: Only 3, 5, 6 from the above steps are required to run the model in Huggingface. The remaining file are there to ensure all information related to the model is in 1 place. 
 
 ## Dog & Cat Classifier
 ### Huggingface Model & App Repo
